@@ -1,0 +1,31 @@
+h3
+{
+	color:navy;
+	background: lime;
+}
+
+body
+{
+	color:red;
+	background-color: aqua;
+}
+
+ul
+{
+	list-style-type: circle;
+	color: magenta;
+	font-size: 24;
+}
+
+img
+{
+	height:200px;
+	width: 300px;
+}
+
+table, tr, td, th
+{
+	border-style: solid;
+	border-width:2px;
+	border-color:black;
+}

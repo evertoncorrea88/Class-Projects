@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mexican Food Order Form</title>
+        <style>
+            table  {table-layout: fixed; border: 1px solid black; width: 100%;}
+            th, td  {border: 1px solid black; }
+        </style>
+    </head>
+    <body>
+        <h3>Mexican Food Order Form</h3>
+        <form action="http://www.example.com" method="post">
+            <p>				
+            <table>
+                Beef-Filled Empanada
+                <tbody>
+                    <tr>
+                        <td>Ground beef</td>
+                        <td>Garlic</td>
+                        <td>Onions</td>
+                        <td>Peppers</td>
+                        <td>Chili Seasoning</td>
+                        <td>Anchovies</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp</td>
+                        <td><input type="checkbox" name="garlic" id="garlic"/></td>
+                        <td><input type="checkbox" name="onions" id="onions"/></td>
+                        <td><input type="checkbox" name="peppers" id="peppers"/></td>
+                        <td><input type="checkbox" name="chili" id="chili"/></td>
+                        <td><input type="checkbox" name="anchovies" id="anchovies"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div align='center'>
+                <label for="quantity">Quantity: </label>
+                <input type="text" name="quantity" id="quantity" size="20" value='0' >
+            </div>
+        </p>
+        <p>
+        <table>
+            Drink
+            <tbody>
+                <tr>
+                    <td>Pepsi</td>
+                    <td>Canada Dry</td>
+                    <td>Coke</td>
+                    <td>Sprite</td>
+                    <td>Mountain Dew</td>
+                </tr>
+                <tr>
+                    <td>
+                        S<input type="checkbox" name="pepsi_s" id="pepsi_s"/>
+                        M<input type="checkbox" name="pepsi_m" id="pepsi_m"/>
+                        L<input type="checkbox" name="pepsi_l" id="pepsi_l"/>
+                    </td>
+                    <td>
+                        S<input type="checkbox" name="canada_s" id="canada_s"/>
+                        M<input type="checkbox" name="canada_m" id="canada_m"/>
+                        L<input type="checkbox" name="canada_l" id="canada_l"/>
+                    </td>
+                    <td>
+                        S<input type="checkbox" name="coke_s" id="coke_s"/>
+                        M<input type="checkbox" name="coke_m" id="coke_m"/>
+                        L<input type="checkbox" name="coke_l" id="coke_l"/>
+                    </td>
+                    <td>
+                        S<input type="checkbox" name="sprite_s" id="sprite_s"/>
+                        M<input type="checkbox" name="sprite_m" id="sprite_m"/>
+                        L<input type="checkbox" name="sprite_l" id="sprite_l"/>
+                    </td>
+                    <td>
+                        S<input type="checkbox" name="mountain_s" id="mountain_s"/>
+                        M<input type="checkbox" name="mountain_s" id="mountain_s"/>
+                        L<input type="checkbox" name="mountain_s" id="mountain_s"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div align='center'>
+            <label for="small">#of Small Cup: </label>
+            <input type="text" name="small" id="small" size="20" value='0'><br>
+            <label for="medium">#of Medium Cup: </label>
+            <input type="text" name="medium" id="medium" size="20" value='0'><br>
+            <label for="large">#of Large Cup: </label>
+            <input type="text" name="large" id="large" size="20" value='0'><br>
+        </div>
+        <hr>
+        </p>
+        <p>
+            <label for="first_name">First Name: </label>
+            <input type="text" name="first_name" id="first_name" size="20"><br>
+            <label for="midle_initial">Midle Initial: </label>
+            <input type="text" name="midle_initial" id="midle_initial" size="20"><br>
+            <label for="last_name">Last Name: </label>
+            <input type="text" name="last_name" id="last_name" size="20"><br>
+            <label for="shipping_address">Shipping Address: </label>
+            <input type="text" name="shipping_address" id="shipping_address" size="30">
+            <label for="city">City: </label>
+            <input type="text" name="city" id="city" size="20"><br>
+            <label for="state">State: </label>
+            <input type="text" name="state" id="state" size="5">
+            <label for="zip">Zip: </label>
+            <input type="text" name="zip" id="zip" size="20">
+            <label for="country">Country: </label>
+            <input type="text" name="country" id="country" size="20"><br>
+            Credit Card<br>
+            <input type="radio" name="card" value="Visa" id="cardVisa"/>
+            <label for="cardVisa">Visa</label><br>
+            <input type="radio" name="card" value="Master" id="cardMaster" />
+            <label for="cardMaster">Master Card</label><br/>
+            <input type="radio" name="card" value="American" id="cardAmerica" />
+            <label for="cardAmerica">American Express</label><br/>
+            <input type="radio" name="card" value="Discover" id="cardDiscover" />
+            <label for="cardDiscover">Discover</label><br>
+            <label for="card_number">Credit Card Number: </label>
+            <input type="text" name="card_number" id="card_number" size="20"><br>
+        </p>
+        <p align='center'>
+            <input type="submit" name="submit" id="submit" value="Submit Order"/>
+        </p>
+    </form>
+</body>
+</html>
+

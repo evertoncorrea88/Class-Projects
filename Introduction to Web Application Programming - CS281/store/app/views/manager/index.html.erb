@@ -1,0 +1,20 @@
+<h1>Manager's Page</h1>
+<h2>Show</h2>
+<h3><%= form_for  :product,  url:  {action:  :show}  do |form| %>
+	<p><label for="name">Name:</label>
+	<%= form.text_field  :name,  size:  20 %></p>
+	<p><%= submit_tag "Show" %></p>
+</h3>
+<% end %>
+
+<h2>Find</h2>
+<h3><%= form_for  :product,  url: {action: :find} do |form| %>
+		<p><label_for="id">ID:</label>
+<%= form.text_field  :id, size: 10 %></p>
+<p><%= submit_tag  "Find" %></p></h3>
+<% end %>
+
+<h2>New</h2>
+	<%= link_to  'New Product',  new_product_path %>
+<h2>Home Page</h2>
+<%=link_to  'Home Page',  home_page_index_path%>

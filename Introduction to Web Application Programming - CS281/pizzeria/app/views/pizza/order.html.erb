@@ -1,0 +1,23 @@
+<h1>Everto's Pizzeria</h1>
+
+<h3>The crust is <%= @crust %>.<h3>
+<h3>The size is <%=  @size %>.</h3> 
+<h3>The toppings you chose are: 
+	<ul>
+		<% @toppings.each  do  |topping| %>
+			<li><%=  topping  %></li>
+		<% end %>
+	</ul>
+</h3>
+<h3>
+	The delivery date is 
+	<%= @delivery_month %>/<%= @delivery_day %>/<%= @delivery_year %>,
+	and the delivery time is 
+	<%= @delivery_hour %>:<%= @delivery_minute %>.
+</h3>
+<h3>Name:  <%= @name %><h3 /> 
+<h3>Email Address:  <%= @email %>.</h3>
+<h3>The telephone number is <%= @telephone %>.</h3>
+<h3>The address is <%= @address %>.</h3>
+
+<%= link_to   "Back",  pizza_index_path  %>

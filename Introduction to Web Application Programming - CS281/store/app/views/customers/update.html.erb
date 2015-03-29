@@ -1,0 +1,11 @@
+<h3>Your Order</h3>
+<p id="notice"><%= notice %></p>
+<h3>Thank you for your order.  <br />
+A confirmation has been sent to <%= @customer.email %>.<br /><br />
+Name: <%= @customer.name %>.<br />
+Email Address: <%= @customer.email %>.<br />
+Mailing Address: <%= @customer.address %>.<br />
+Contact Telephone Number: <%= @customer.phone %>.<br />
+</h3>
+
+<%= link_to 'Continue Shopping', home_page_index_path %>

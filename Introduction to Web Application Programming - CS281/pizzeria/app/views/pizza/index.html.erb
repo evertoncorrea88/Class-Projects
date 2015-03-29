@@ -1,0 +1,60 @@
+<h1>Everton's Pizzeria</h1>
+<%= image_tag("pizza.gif") %>
+<h3>
+	<%= form_for :pizza,  url:  {action: :order} do |form| %>	
+		<p>
+			<%= form.label :crust %>: 
+			<%= form.radio_button :crust, 'Plain White' %> 
+			<%= form.label :plain_white %>
+			<%= form.radio_button :crust, 'Whole Wheat' %> 
+			<%= form.label :whole_wheat %> 
+		</p>
+		<p>
+			<%= form.label :size %>: 
+			<%= form.select :size, {Small:  "small",  Large: "large"} %>	
+		</p>
+		<p>
+			<%= form.label   'toppings' %>: 
+			<%= form.check_box   :mushrooms %> 
+			<%= form.label   :mushrooms %> 
+			<%= form.check_box   :pepperoni %> 
+			<%= form.label   :pepperoni %> 
+			<%= form.check_box   :vegetables %> 
+			<%= form.label   :vegetables %>
+		</p>
+		<p>
+			<%= form.label   :delivery_date %>
+			<%= form.date_select(:delivery_date) %>
+		</p>
+		<p>
+			<%= form.label   :delivery_time %>: 
+			<%= form.time_select(:delivery_time) %>
+		</p>	
+		<p>
+			<label >Name:</label>
+			<%= form.text_field  :name, size:  20 %>
+		</p>
+		<p>
+			<label >Email Address:</label>
+			<%= form.email_field  :email, size:  20 %>
+		</p>
+		<p>
+			<%= form.label   :telephone %> 
+			<%= form.phone_field   :telephone %>
+		</p>
+		<p>
+			<%= form.label   :address,   style:  'float: left' %> 
+			<%= form.text_area   :address,   rows: 3,  cols: 40 %>
+		</p>   	
+		<p>
+			<%= submit_tag  "Send" %>
+		</p>
+	<% end %>
+</h3>
+
+<h3>The time is now <%= @time %>.</h3>
+
+<div id="time_div">
+	<%= link_to "Click here ", url: { action: :update_time, remote: true} %>
+	to update the time. 
+</div>

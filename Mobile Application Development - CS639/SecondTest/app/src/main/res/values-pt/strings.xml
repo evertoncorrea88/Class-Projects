@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Segundo Teste</string>
+    <string name="screen1">Tela 1</string>
+    <string name="screen2">Tela 2</string>
+    <string name="hello_world">Olá Mundo!</string>
+    <string name="action_settings">Configurações</string>
+    <string name="new_activity_text">Bem-vindo a Nova Atividade!</string>
+    <string name="airplane_change">Modo avião alterado</string>
+    <string name="touched_screen">Você tocou na tela!</string>
+
+</resources>

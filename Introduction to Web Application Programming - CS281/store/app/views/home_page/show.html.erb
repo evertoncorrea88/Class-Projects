@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Quantity in stock:</strong>
+  <%= @product.quantity_in_stock %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+<strong>Image:</strong>
+<%= image_tag @product.image %>
+</p>
+
+
+<h2>Add to Cart</h2>
+<h3><%= form_for  :product, url: {action: :add_to_cart} do |form| %>
+	<p><label_for="quantity">Quantity Ordered:</label>
+	<%= form.text_field  :quantity_ordered,  size:  10,  value: ' ' %></p>
+	<%= form.hidden_field  :id %>
+	<p><%= submit_tag  "Add to Cart" %></p></h3>
+<% end %>
+
+<%= link_to 'Back', home_page_index_path %>

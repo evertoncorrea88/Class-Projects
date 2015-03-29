@@ -1,0 +1,20 @@
+<h1>Fruit Store</h1>
+<h2>List all products</h2>
+<h3><%= form_for :product,  url: {action: :list} do |form| %>
+	<p><%= submit_tag "List Products" %></p></h3>
+<% end %>
+
+<h2>Find a product</h2>
+<h3><%= form_for :product, url: {action: :find} do |form| %>
+	<p><label for="title">Name:</label>
+	<%= form.text_field :name, size: 20 %></p>
+	<p><%= submit_tag "Find a Product" %></p></h3>
+<% end %>
+
+<h3><%= button_to "Show Shopping Cart", action:  :show_cart %></h3>
+
+<%= button_to 'Login', home_page_login_path, method: "post" %>
+
+<h3><%= button_to "Check Out",  action: :check_out %></h3>
+
+

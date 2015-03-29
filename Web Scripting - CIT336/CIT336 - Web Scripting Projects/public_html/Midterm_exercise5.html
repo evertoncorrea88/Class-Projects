@@ -1,0 +1,50 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            var names = new Array();
+            var passwords = new Array();
+
+            function register()
+            { //This function is complete. Do not change it.
+                var newName = document.getElementById("newName").value;
+                var newPassword = document.getElementById("newPassword").value;
+                var b = search(newName, newPassword);
+                if (b)
+                    alert("You already have registered " + newName);
+                else {
+                    alert("Welcome " + newName);
+                    names[names.length] = newName;
+                    passwords[passwords.length] = newPassword;
+                }
+            }
+
+            function login()
+            { //Complete this function.
+                var newName = document.getElementById("newName").value;
+                var newPassword = document.getElementById("newPassword").value;
+                var b = search(newName, newPassword);
+                if (b)
+                    alert("Welcome back " + newName);
+                else {
+                    alert("Plrease register first " + newName);
+                }
+            }
+
+            function search(newName, newPassword)
+            { //Complete this function.
+                //If the name and the password is in arrays names and passwords
+                // return true. Otherwise return false.
+                for (i = 0; i < names.length; i++) {
+                    if (names[i] == newName && passwords[i] == newPassword) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        </script>
+        Name:&emsp;&ensp;<input type = "text" id = "newName" size="25"><br>
+        Password:<input type = "password" id="newPassword" size="25"><br><br>
+        <input type = "submit" value = "Register" onclick = "register()">
+        <input type="submit" value="Login" onclick = "login()">
+    </body>
+</html>

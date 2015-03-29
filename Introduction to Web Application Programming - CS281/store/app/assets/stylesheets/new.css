@@ -1,0 +1,32 @@
+h1, h2, h3, h3, h4, h5, h6 {
+	color: black;
+}
+
+form {
+	color: black;
+}
+
+table {
+	border-color: black;
+}
+
+a:link {
+	color: black;
+}
+
+body {
+	background-size: 1200px 1000px;
+    background-repeat: no-repeat;
+    background-color: gray;
+	text-align: center;
+	color: blue;
+}
+
+.image_back{
+	position: fixed;
+	width: 160px;
+	height: 120px;
+	margin-left: -600px;
+	margin-top: 5px;
+}
+

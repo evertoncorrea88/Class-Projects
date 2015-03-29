@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Untitled</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            function operate()
+            {
+                var plus = document.getElementById("plus").checked;
+                var minus = document.getElementById("minus").checked;
+                var mult = document.getElementById("star").checked;
+                var div = document.getElementById("backslash").checked;
+                var op1 = parseInt(document.getElementById("op1").value);
+                var op2 = parseInt(document.getElementById("op2").value);
+                var res = document.getElementById("result");
+
+                if (plus) {
+                    res.value = op1 + op2;
+                } else if (minus) {
+                    res.value = op1 - op2;
+                } else if (mult) {
+                    res.value = op1 * op2;
+                } else if (div) {
+                    res.value = op1 / op2;
+                } else {
+                    alert("Please check one of the radio buttons.");
+                }
+            }
+        </script>
+
+        <form action="formhandler.php" method="post">
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="radio" name="scale" id="plus" value="plus"> + <br>
+            <input type="text" name="op1" id="op1" value="" tabindex="3" size="10" maxlength="40" >
+            <input type="radio" name="scale" id="minus" value="minus"> -
+            <input type="text" name="op2" id="op2" value="" tabindex="3" size="10" maxlength="40" > 
+            <input type="button" name="equal" id="equal" value="=" onclick="operate()"/>
+            <input type="text" name="result" id="result" value="" tabindex="3" size="10" maxlength="40" >
+            <br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="radio" name="scale" id="star" value="star"> *<br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="radio" name="scale" id="backslash" value="backslash"> /<br> 
+        </form>
+    </body>
+</html>

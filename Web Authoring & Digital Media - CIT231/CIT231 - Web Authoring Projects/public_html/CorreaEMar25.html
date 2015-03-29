@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>My Movie Library</title>
+        <style>
+            body{
+                background-color: gold;
+            }
+            h3{
+                color: red;
+            }
+            h2{
+                color: blue;
+            }
+            img{
+                height: 80px;
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="mailto:everton.correa88@gmail.com" method="post">
+            <h2>All about the movies</h2>
+            <fieldset>
+                <legend>My information</legend>
+                <h3>What is your first name?</h3>
+                <input name="fname" size="25">
+                <br>
+                <h3>What is your last name?</h3>
+                <input name="lname" size="25" required>
+            </fieldset>
+            <br>
+            <fieldset>
+                <h4>What year of movies is your favorite?</h4>
+                <input type="radio" name="fav" value="50s"> 1950s 
+                <input type="radio" name="fav" value="60s"> 1960s
+                <input type="radio" name="fav" value="70s"> 1970s
+                <input type="radio" name="fav" value="80s"> 1980s 
+                <input type="radio" name="fav" value="90s" checked> 1990s 
+                <input type="radio" name="fav" value="recent"> Recent 
+                <br>
+                <h4>What genre of movies do your prefer?</h4>
+                <input type="checkbox" value="action" checked> Action 
+                <input type="checkbox" value="drama"> Drama 
+                <input type="checkbox" value="comedy"> Comedy 
+                <input type="checkbox" value="animation"> Animation 
+                <input type="checkbox" value="horror"> Horror
+                <input type="checkbox" value="romance"> Romance
+                <br>
+                <h4>Pick your celebrity</h4>
+                <table>
+                    <tr>
+                        <td><img src="http://24.media.tumblr.com/76681ef8b286a0fcd14025afa2001cbd/tumblr_mjm6hqB6J81r33r0fo1_250.jpg"></td>
+                        <td><img src="http://ia.media-imdb.com/images/M/MV5BMjExNzA4MDYxN15BMl5BanBnXkFtZTcwOTI1MDAxOQ@@._V1_SY317_CR7,0,214,317_AL_.jpg"></td>
+                        <td><img src="http://media1.popsugar-assets.com/files/2014/03/18/945/n/1922153/2d024105f59c4684_thumb_temp_image10906271395178611/i/Kerry-Washington-Makeup-Tutorial.jpg"></td>
+                        <td><img src="http://www.myfilmviews.com/wp-content/uploads/2012/12/emma_stone_1920_1200_nov0720103.jpg"></td>
+                        <td><img src="http://assets-s3.usmagazine.com/uploads/assets/celebrities/204-tom-hanks/1251126993_tom_hanks_290x402.jpg"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" value="willsmith"> </td>
+                        <td><input type="checkbox" value="vindiesel"> </td>
+                        <td><input type="checkbox" value="kerryw"></td>
+                        <td><input type="checkbox" value="emmas"></td>
+                        <td><input type="checkbox" value="tomhanks"></td>
+                    </tr>
+                </table>	
+                <br>
+                <p>
+                    Running Time
+                    <br>
+                    <select name="runningtime" multiple size="7">
+                        <option value="under30"> Under 30</option>
+                        <option value="under60"> Under an hour</option>
+                        <option value="under90"> Under 1.5 hours</option>
+                        <optgroup label="Too Long">
+                            <option value="under120"> Under 2 hours</option>
+                            <option value="under150"> Under 2.5 hours</option>
+                            <option value="marathon"> Too Long</option>
+                        </optgroup>
+                    </select>
+                </p>
+                Comments: 
+                <br>
+                <textarea name="comments" rows="3" autofocus>	</textarea>
+            </fieldset>
+            <br>
+            <input type="reset" name="clear" value="Clear">
+            <input type="submit" name="submit" value="Send Info">
+            <button name="button" onclick="alert('This button does nothing')" > Click Me </button>
+        </form>
+    </body>
+</html>

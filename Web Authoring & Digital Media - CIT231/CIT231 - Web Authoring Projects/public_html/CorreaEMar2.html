@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spring Break</title>
+        <style>
+            body {
+                background-image: url(http://onemillionwallpapers.com/wp-content/uploads/2015/01/Beach-Wallpapers-For-Macbook-Air.jpg);
+                background-position: center top;
+                background-size: 100% auto;
+
+                font-family: sans-serif;
+                font-size: large;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h3>Spring Break Travel</h3>
+
+        <form method="post">
+            <fieldset>
+                <legend>Personal information:</legend>
+
+                <p>
+                    First Name: <input type="text" name="first_name" size="30"><br><br>
+                    Last Name: <input type="text" name="last_name" size="30">
+                </p>
+                <p>
+                    Gender: <input type="radio" name="gender" value="male"> Male <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+                    <input type="radio" name="gender" value="female"> Female
+                </p>
+
+                <p>
+                    Email: <input type="email" name="email_address" placeholder="your_email@somewhere.com" size="30">
+                </p>
+
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Travel information:</legend>
+
+                <p>
+                    Country: 
+                    <select name="country">
+                        <optgroup label="Africa">
+                            <option value="gam">Gambia</option>
+                            <option value="mad">Madagascar</option>
+                            <option value="nam">Namibia</option>
+                        </optgroup>
+                        <optgroup label="Europe">
+                            <option value="fra">France</option>
+                            <option value="rus">Russia</option>
+                            <option value="uk">UK</option>
+                        </optgroup>
+                        <optgroup label="North America">
+                            <option value="can">Canada</option>
+                            <option value="mex">Mexico</option>
+                            <option value="usa">USA</option>
+                        </optgroup>
+                        <optgroup label="South America">
+                            <option value="arg">Argentina</option>
+                            <option value="bra">Brazil</option>
+                            <option value="col">Colombia</option>
+                        </optgroup>
+                    </select>
+                </p>
+
+                <p>
+                    Checklist: <input type="checkbox" name="passport">Passport<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="tickets" >Tickets<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="bags" >Bags<br>
+                </p>
+
+                <p>Comments: <br> <textarea name="comments" rows="5" cols="20">Your comments</textarea></p>
+            </fieldset>
+
+            <p><input type="submit"></p>            
+        </form>   
+
+    </body>
+</html>

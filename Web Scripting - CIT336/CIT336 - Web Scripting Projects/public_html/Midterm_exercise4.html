@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            function findWord() {
+                var str = document.getElementById("word").value;
+                var myRegExp = new RegExp("[A-Z][A-Za-z]*,");  //Complete the parenthesis
+                document.write(myRegExp.test(str) + "<br>");
+            }
+        </script>
+        <input type="text" name="word" id="word">
+
+        <input type="submit" value="Submit" onclick = "findWord()">
+    </body>
+</html>

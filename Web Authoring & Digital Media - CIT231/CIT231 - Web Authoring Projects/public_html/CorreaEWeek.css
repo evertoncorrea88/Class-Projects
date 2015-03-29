@@ -1,0 +1,16 @@
+table {
+    border: 2px black solid;
+}
+img {
+    width: 400px;
+    height: 400px;
+}
+body {
+    background-color: cadetblue;
+}
+h1 {
+    text-align: center;
+}
+h3 {
+    background-color: darkkhaki;
+}

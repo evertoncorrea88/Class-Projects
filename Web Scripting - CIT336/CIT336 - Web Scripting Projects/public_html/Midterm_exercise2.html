@@ -1,0 +1,91 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            /*
+             Correct Answers:
+             1. (b)
+             2. (d)
+             3. (a)
+             4. (c)
+             5. (c)  
+             */
+            function f()
+            {
+                var right = 0;
+                var num1 = document.getElementById("Washington").checked;
+                var num2 = document.getElementById("Eleven").checked;
+                var num3 = document.getElementById("Twenty8").checked;
+                var num4 = document.getElementById("Ninety45").checked;
+                var num5 = document.getElementById("Nepal").checked;
+
+                if(num1)
+                    right++;
+                if(num2)
+                    right++;
+                if(num3)
+                    right++;
+                if(num4)
+                    right++;
+                if(num5)
+                    right++;
+                
+                alert("You answered " + right + " questions correctly.");
+            }
+        </script>
+        1. What is the name of the US capital? <br>
+        <p>
+            a) <input type="radio" name="Capital" id="Paris" />
+            Paris&emsp;&emsp;
+            b) <input type="radio" name="Capital" id="Washington" />
+            Washington DC<br>	  
+            c) <input type="radio" name="Capital" id="London" />
+            London&emsp;
+            d) <input type="radio" name="Capital" id="Lisbon" />
+            Lisbon</p>
+
+        2. Number 7 is a prime number. What is the next prime number?<br>
+        <p>
+            a) <input type="radio" name="Number" id="Eight" />
+            8&emsp;&emsp;
+            b) <input type="radio" name="Number" id="Nine" />
+            9<br>	  
+            c) <input type="radio" name="Number" id="Ten" />
+            10&emsp;&ensp;
+            d) <input type="radio" name="Number" id="Eleven" />
+            11</p>
+
+        3. How many days are in February 2015?<br>
+        <p>
+            a) <input type="radio" name="Month" id="Twenty8" />
+            28&emsp;&emsp;
+            b) <input type="radio" name="Month" id="Twenty9" />
+            29<br>	  
+            c) <input type="radio" name="Month" id="Thirty1" />
+            31&emsp;&emsp;
+            d) <input type="radio" name="Month" id="Thirty2" />
+            32</p>
+
+        4. In which year the second world war ended?<br>
+        <p>
+            a) <input type="radio" name="War" id="Ninety44" />
+            1944&emsp;&emsp;
+            b) <input type="radio" name="War" id="Ninety42" />
+            1942<br>	  
+            c) <input type="radio" name="War" id="Ninety45" />
+            1945&emsp;&emsp;
+            d) <input type="radio" name="War" id="Ninety40" />
+            1940</p> 
+
+        5. In which country Mount Everest is located?<br>
+        <p>
+            a) <input type="radio" name="Mountain" id="China" />
+            China&emsp;&emsp;
+            b) <input type="radio" name="Mountain" id="India" />
+            India<br>	  
+            c) <input type="radio" name="Mountain" id="Nepal" />
+            Nepal&emsp;&emsp;
+            d) <input type="radio" name="Mountain" id="England" />
+            England</p>     
+        <input type="submit" id="submit" value="Submit" onclick = "f()">
+    </body>
+</html>

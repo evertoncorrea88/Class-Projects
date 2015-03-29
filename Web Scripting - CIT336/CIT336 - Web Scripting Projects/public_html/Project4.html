@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercises</title>
+    </head>
+
+    <body>
+        <h2>Class Exercise</h2>
+        <label for="textBox1">m</label>
+        <input type="text" name="textBox1" id="textBox1" size="20"><br>
+        <label for="textBox2">n</label>
+        <input type="text" name="textBox2" id="textBox2" size="20"><br>
+        <label for="textBox3">Result</label>
+        <input type="text" name="textBox3" id="textBox3" size="20" readonly><br>
+        <input type="button" value="Calc" onclick="calc_pow()">
+
+        <h2>Net Calculation</h2>
+        <label>Name: </label>
+        <input type="text" name="nameBox" id="nameBox" size="20"><br>
+        <label>Income:&nbsp;</label>
+        <input type="text" name="incomeBox" id="incomeBox" size="20"><br>
+        <label>Tax Rate:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="taxRateBox" id="taxRateBox" size="20"><br>
+        <input type="button" value="Click Me" onclick="calc_income()"><br>
+
+        <script type="text/javascript">
+            function calc_pow()
+            {
+                textBox3.value = Math.pow(textBox1.value, textBox2.value);
+            }
+
+
+            function calc_income()
+            {
+                var result = incomeBox.value - incomeBox.value * taxRateBox.value / 100;
+                alert(nameBox.value + " net is: " + result);
+            }
+
+
+            document.write("<br><h2>Exercise 2 in lecture 4</h2>");
+            function random_pow(n)
+            {
+                var result = 2;
+                for (i = 1; i < n; i++) {
+                    result = result * 2;
+                }
+                return result;
+            }
+            var n = Math.round(1 + Math.random() * 9);
+            document.write("The random number is " + n + "<br>");
+            var result = random_pow(n);
+            document.write("The result of 2 to the power of " + n + " is: " + result);
+        </script>
+    </body>
+</html>

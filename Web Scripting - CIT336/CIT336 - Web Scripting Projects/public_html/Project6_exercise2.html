@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Untitled</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            var a = new Array();
+            function listIt()
+            {
+                var s = "";
+                for (i = 0; i < a.length; i++)
+                    s = s + a[i] + "\n";
+                alert(s);
+            }
+
+            function add()
+            {
+                var myTextField = document.getElementById("myText");
+                if (myTextField.value.length == 0) {
+                    alert("Enter a name.");
+                    return;
+                }
+                a[a.length] = myTextField.value;
+                myTextField.value = "";
+            }
+
+            function find()
+            {
+                var myTextField = document.getElementById("myText");
+                if (myTextField.value.length == 0) {
+                    alert("Enter a name.");
+                    return;
+                }
+                for (i = 0; i < a.length; i++) {
+                    if (myTextField.value == a[i]) {
+                        alert("Name " + myTextField.value + " found in position: " + i);
+                        return;
+                    }
+                }
+                alert("Name not found.");
+            }
+        </script>
+        <input type="text" id="myText" /><br>
+        <input type="button" onclick="add()" value="Add a name" />
+        <input type="button" onclick="listIt()" value="List the names" />
+        <input type="button" onclick="find()" value="Find" />
+    </body>
+</html>

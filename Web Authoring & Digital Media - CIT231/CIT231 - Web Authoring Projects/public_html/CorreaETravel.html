@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Travel Agency</title>
+        <style>
+            body {
+                background-image: url(http://media.rusbase.com/blogs/sunset-plane.png);
+                background-position: left top;
+                background-size: 170%;
+                background-repeat: no-repeat;
+                font-family: sans-serif;
+                font-size: large;
+                color: gainsboro;
+            }
+            .div_left {
+                width: 49%;
+                float: left;
+            }
+            .div_right {
+                margin-left: 50%;
+            }
+            .shadow{
+                box-shadow: 3px 3px 5px #888888;
+            }
+            select, input {
+                width: 20em;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="post">
+            <h2>Everton's Travel Agency</h2>
+            <fieldset class="shadow">
+                <legend>Personal information:</legend>
+                <div class="div_left">
+                    <p>
+                        First Name:<br>
+                        <input type="text" name="first_name">
+                    </p>
+                    <p>
+                        Last Name:<br>
+                        <input type="text" name="last_name">
+                    </p>
+                    <p>
+                        Gender:<br>
+                        <input type="radio" name="gender" value="male" style="width: 2em;" checked>Male<br>
+                        <input type="radio" name="gender" value="female" style="width: 2em;">Female
+                    </p>
+                </div>    
+                <div class="div_right">
+                    <p>
+                        Phone:<br>
+                        <input type="tel" name="phone">
+                    </p>
+                    <p>
+                        Email:<br>
+                        <input type="email" name="email_address" placeholder="your_email@somewhere.com">
+                    </p>
+                    <p>
+                        Date of Birth:<br>
+                        <input type="date" name="birth" >
+                    </p>    
+                </div>   
+            </fieldset>
+            <br>
+            <fieldset class="shadow">
+                <legend>Travel information:</legend>
+                <div class="div_left">
+                    <p>
+                        Flying From:<br>
+                        <select name="from">
+                            <option value="def">Select one option</option>
+                            <optgroup label="Africa">
+                                <option value="gam">Gambia</option>
+                                <option value="mad">Madagascar</option>
+                                <option value="nam">Namibia</option>
+                            </optgroup>
+                            <optgroup label="Europe">
+                                <option value="fra">France</option>
+                                <option value="rus">Russia</option>
+                                <option value="uk">UK</option>
+                            </optgroup>
+                            <optgroup label="North America">
+                                <option value="can">Canada</option>
+                                <option value="mex">Mexico</option>
+                                <option value="usa">USA</option>
+                            </optgroup>
+                            <optgroup label="South America">
+                                <option value="arg">Argentina</option>
+                                <option value="bra">Brazil</option>
+                                <option value="col">Colombia</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <p>
+                        Flying To:<br>
+                        <select name="to">
+                            <option value="def">Select one option</option>
+                            <optgroup label="Africa">
+                                <option value="gam">Gambia</option>
+                                <option value="mad">Madagascar</option>
+                                <option value="nam">Namibia</option>
+                            </optgroup>
+                            <optgroup label="Europe">
+                                <option value="fra">France</option>
+                                <option value="rus">Russia</option>
+                                <option value="uk">UK</option>
+                            </optgroup>
+                            <optgroup label="North America">
+                                <option value="can">Canada</option>
+                                <option value="mex">Mexico</option>
+                                <option value="usa">USA</option>
+                            </optgroup>
+                            <optgroup label="South America">
+                                <option value="arg">Argentina</option>
+                                <option value="bra">Brazil</option>
+                                <option value="col">Colombia</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <p>
+                        Adults (18+):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Children (0-17):<br>
+                        <input type="number" name="adults" min="0" max="5" step="1" style="width: 3em;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="number" name="children" min="0" max="5" step="1" style="width: 3em;">
+                    </p>
+                </div>    
+                <div class="div_right">
+                    <p>
+                        Departing:<br>
+                        <input type="date" name="departing">
+                    </p> 
+                    <p>
+                        Returning:<br>
+                        <input type="date" name="returning" >
+                    </p> 
+                    <p>
+                        <input type="checkbox" name="hotel" style="width: 2em">Add a hotel
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" name="hotel" style="width: 2em">Add a car
+                    </p>
+                </div>   
+            </fieldset>
+            <p>
+                <input type="button" value="Reset" class="shadow">
+                <input type="submit" class="shadow">
+            </p>            
+        </form>   
+    </body>
+</html>

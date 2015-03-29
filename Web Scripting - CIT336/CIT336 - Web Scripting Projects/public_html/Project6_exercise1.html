@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Example 1</title>
+    </head>
+
+    <body>
+        <form action="http://vulcan.seidenberg.pace.edu/~mbadii/Project1.php" method="post" onSubmit="return validate()">
+            <input type="text" Id="myTextBox" size="50"><br>
+            <input type="submit" value = "Submit">
+        </form>
+        <script type="text/javascript">
+            function validate()
+            {
+                var str = document.getElementById("myTextBox").value;
+                var myRegExp = new RegExp("(^|.* )[0-9]{3}\\.[0-9]{3}\\.[0-9]\\.[0-9]{3}($| .*)");
+                document.write(myRegExp.test(str));
+                return false;
+            }
+        </script>
+    </body>
+</html>

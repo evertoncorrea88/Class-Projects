@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Untitled</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            function check()
+            {
+                var name = document.getElementById("name").value;
+                var password = document.getElementById("password").value;
+
+                var decade = document.getElementById("decade").checked;
+                var century = document.getElementById("century").checked;
+                var millennium = document.getElementById("millennium").checked;
+                var milligram = document.getElementById("milligram").checked;
+
+                var baseball = document.getElementById("baseball").checked;
+                var tennis = document.getElementById("tennis").checked;
+                var volleyball = document.getElementById("volleyball").checked;
+                var football = document.getElementById("football").checked;
+
+                if (name.length == 0) {
+                    alert("Please enter your name.");
+                    return false;
+                } else if (password.length == 0) {
+                    alert("Please enter your password.");
+                    return false;
+                } else if (!decade && !century && !millennium && !millennium) {
+                    alert("Please check one of the radio buttons.");
+                    return false;
+                } else if (!baseball && !tennis && !volleyball && !football) {
+                    alert("Please at least check one of the check boxes.");
+                    return false;
+                }
+            }
+        </script>
+
+        <form action="formhandler.php" method="post">
+            User<br>
+            <input type="text" name="name" id="name" value="" tabindex="3" size="30" maxlength="40" ><br><br>
+            Password<br>
+            <input type="password" name="password" id="password" value="" size="30" />
+            <br><br>
+            <fieldset>
+                <legend>Which word means a "period of 100 years"?<br></legend>
+                <input type="radio" name="scale" id="decade" value="decade"> decade<br>
+                <input type="radio" name="scale" id="century" value="century"> century<br>
+                <input type="radio" name="scale" id="millennium" value="millennium"> millennium<br>
+                <input type="radio" name="scale" id="milligram" value="milligram"> milligram<br>
+            </fieldset>
+            <br><br>
+            Favorite Games:<br>
+            <input type="checkbox" name="game" id = "baseball" value="Baseball"/>Baseball
+            <input type="checkbox" name="game" id = "tennis" value="Tennis"/>Tennis
+            <input type="checkbox" name="game" id = "volleyball" value="Volleyball"/>Volleyball
+            <input type="checkbox" name="game" id = "football" value="Football"/>Football<br><br>
+
+            <input type="submit" name="submit" id="submit" value="Submit" onclick = "check()"/> 
+            <input type="reset" name="reset" id="reset" value="Reset"/>
+        </form>
+    </body>
+</html>

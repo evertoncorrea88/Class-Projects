@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var n = Math.random();
+            if (n >= 0 && n < 5) {
+                document.write("A random number between 0 and less than 0.5.<br>");
+                document.write(n + " is a decimal number between 0 and less than 0.5.<br>");
+            } else {
+                document.write("A random number between 0.5 and less than 1.<br>");
+                document.write(n + " is a decimal number between 0.5 and less than 1.<br>");
+            }
+            document.write("We are using random number of the Math object.<br>");
+            document.write("This message is not part of the if-else statement.<br>");
+
+
+            var size = 1;
+            var text = "Hello!";
+            while (size < 8) {
+                document.write(text.fontsize(size) + "<br>");
+                size++;
+            }
+
+
+            var r = 250;
+            var g = 0;
+            while (g <= 200) {
+                document.write("<span style=\"color: rgb(" + r + "," + g + ",0); \">Hello!</span><br>");
+                r -= 20;
+                g += 20;
+            }
+
+        </script>
+    </body>
+</html>

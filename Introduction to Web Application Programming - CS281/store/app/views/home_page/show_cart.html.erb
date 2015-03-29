@@ -1,0 +1,27 @@
+<h3>Shopping Cart</h3>
+<p id="notice"><%= notice %></p>
+
+<table align="center">
+<% for item in @customer.cart_items %>
+<tr>
+<td><%= item.product.name %></td>
+<td><%= item.quantity_ordered %> &times;</td>
+<td><%= number_to_currency(item.product.price) %></td>
+<td ><%= number_to_currency(item.sub_total) %></td>
+</tr>
+<% end %>
+	
+<tr class="total_line">
+<td colspan="3">Total</td>
+<td class-"total cell"><%= number_to_currency(@customer.total_price) %></td>
+</tr>
+</table>
+<p>
+<%= button_to "Empty Cart", @customer,  
+method:  :delete,  data:  { confirm: 'Are you sure?' } %>
+</p>
+<p>
+<%= link_to 'Back', home_page_index_path %>
+</p>
+
+<h3><%= button_to "Check Out",  action: :check_out %></h3>
