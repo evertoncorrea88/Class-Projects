@@ -76,6 +76,7 @@ public class IntList {
         return length;
     }
 
+    @Override
     public String toString() {
         String result = "";
         IntNode temp = front;
