@@ -38,7 +38,12 @@ public class FileProcessing {
     }
 
     public static void writeFile(String content) throws IOException {
-        PrintWriter pw = new PrintWriter("copy_file.txt");
+        PrintWriter pw = new PrintWriter("destination.txt");
+        String lines[] = content.split("\\r?\\n");
+        content = "";
+        for (int i = 0; i < lines.length; i++) {
+            content = content + "Line " + (i + 1) + ": " + lines[i] + "\n";
+        }
         pw.print(content);
         pw.close();
     }
