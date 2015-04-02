@@ -16,6 +16,7 @@ public class IntListTest {
     //----------------------------------------------------------------
 
     public static void main(String[] args) {
+        
         scan = new Scanner(System.in);
         printMenu();
         int choice = scan.nextInt();
