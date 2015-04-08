@@ -90,8 +90,8 @@ public class LinkedQueue {
             next = null;
             this.element = element;
         }
-        
-        public String toString(){
+
+        public String toString() {
             return element + "";
         }
     }
