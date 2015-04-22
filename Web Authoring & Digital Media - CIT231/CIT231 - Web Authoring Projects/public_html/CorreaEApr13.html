@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>All about the numbers</title>
+        <style>
+            body {
+                background-color: purple;
+                font-size: 24px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        Let's do some counting
+        <script>
+            var num1, num2, num3, totals;
+
+//            num1 = prompt("Please enter a number");
+//
+//            document.write("<br>The number you picked is: " + num1);
+//
+//            num2 = prompt("Please enter a second number", "56");
+//
+//            document.write("<br>Second number is: " + num1);
+//
+//            document.write("<br>The sum of number is: " + (num1 + num2));
+
+            num1 = parseFloat(prompt("How much is your 1st item?", "64.09"));
+
+            num2 = parseFloat(prompt("How much is your 2nd item?", "4.39"));
+
+            num3 = parseFloat(prompt("How much is your 3rd item?", "19.99"));
+
+            document.write("The total of all the items is: $" + (num1 + num2 + num3));
+
+            totals = num1 + num2 + num3;
+            if (totals <= 100) {
+                document.write("<h2>The change from $100 bill is: $" + (100 - totals) + "</h2>");
+            }else{
+                document.write("<h2>You don't have enough cash</h2>");
+            }
+
+
+        </script>            
+    </body>
+</html>

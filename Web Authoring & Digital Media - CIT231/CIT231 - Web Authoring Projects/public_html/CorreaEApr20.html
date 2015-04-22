@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style type="text/css">
+            body{
+                background-color: green;
+                color: yellow;
+                font-size: 24px;
+            }
+            img{
+                width: 36px;
+                height: 36px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function forLoop() {
+                for (var i = 0; i < 5; i++) {
+                    document.write('<br><img src="http://www.clker.com/cliparts/d/d/b/f/12370993131136060331Steren_Bored_avatar.svg.hi.png">');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        This page is about functions
+        <p>
+            It will either add or multiply 2 numbers and if the numbers are doubled it will execute again.
+        </p>
+
+        <script type="text/javascript">
+            var num1, num2;
+
+            var pickNumber = function () {
+                num1 = Math.floor(Math.random() * 5) + 1;
+                num2 = Math.floor(Math.random() * 5) + 1;
+
+                document.write("The 1st number is: " + num1);
+                document.write("<br>The 2nd number is: " + num2);
+            }
+
+            pickNumber();
+
+            var calc = parseInt(prompt("1. add, 2. multiply"));
+            document.write("<br>The calculation is: " + calc);
+
+            switch (calc) {
+                case 1:
+                    document.write("<br>" + num1 + " + " + num2 + " = " + (num1 + num2));
+                    break;
+                case 2:
+                    document.write("<br>" + num1 + " * " + num2 + " = " + (num1 * num2));
+                    break;
+                default:
+                    document.write("<br>Please only pick 1 or 2!");
+            }
+
+            if (num1 == num2) {
+                document.write("<br>");
+                pickNumber();
+                forLoop();
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<html>
+	<head><title>My dice game</title>
+		<style>
+			body
+			{
+				background-color: black;
+				color: white;
+			}
+			img
+			{
+				heign: 50px;
+				width: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			var num1 = Math.floor(Math.random()*6)+1;
+			document.write("First number is: " + num1);
+
+			var num2 = Math.floor(Math.random()*6)+1;
+			document.write("<br>Second number is: " + num2);
+
+			if(num1 == 1)
+			{
+				document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-one.png'>");
+			}
+			else if(num1 == 2)
+			{
+				document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-two.png'>");
+			}
+			else if(num1 == 3)
+			{
+				document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-three.png'>");
+			}
+			else if(num1 == 4)
+			{
+				document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-four.png'>");
+			}
+			else if(num1 == 5)
+			{
+				document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-five.png'>");
+			}
+			else if(num1 == 6)
+			{
+				document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-six.png'>");
+			}
+			else
+				document.write("<br>Wrong number");
+
+			/*if(num2 == 1)
+			{
+				document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-one.png'>");
+			}
+			else if(num2 == 2)
+			{
+				document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-two.png'>");
+			}
+			else if(num2 == 3)
+			{
+				document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-three.png'>");
+			}
+			else if(num2 == 4)
+			{
+				document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-four.png'>");
+			}
+			else if(num2 == 5)
+			{
+				document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-five.png'>");
+			}
+			else if(num2 == 6)
+			{
+				document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-six.png'>");
+			}*/
+
+			switch(num2)
+			{
+				case 1:
+					document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-one.png'>");
+					break;
+
+				case 2:
+					document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-two.png'>");
+					break;
+
+				case 3:
+					document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-three.png'>");
+					break;
+
+				case 4:
+					document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-four.png'>");
+					break;
+
+				case 5:
+					document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-five.png'>");
+					break;
+
+				case 6:
+					document.write("<br><img src = 'http://game-icons.net/icons/delapouite/dice/png/dice-six-faces-six.png'>");
+					break;
+
+				default:
+					document.write("<br>Wrong number");
+					break;
+			}
+
+			var total = num1 + num2;
+			document.write("<br>The sum of the dice are: " + total);
+			if(total % 2 == 0)
+				document.write("<br>You have an even number");
+			else
+				document.write("<br>You have an odd number");
+		</script>
+	</body>
+</html>

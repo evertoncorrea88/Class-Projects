@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coins</title>
+        <style>
+            body{
+                background-color: graytext;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var dollar, half_dollar, quarter, dime, nickel, penny, total;
+
+            dollar = parseInt(prompt("Dollar coins:", "0"));
+            half_dollar = parseInt(prompt("Half dollar coins:", "0"));
+            quarter = parseInt(prompt("Quarter coins:", "0"));
+            dime = parseInt(prompt("Dime coins:", "0"));
+            nickel = parseInt(prompt("Nickel coins:", "0"));
+            penny = parseInt(prompt("Penny coins:", "0"));
+
+            total = dollar + (half_dollar * 0.5) + (quarter * 0.25) + (dime * 0.10) + (nickel * 0.05) + (penny * 0.01);
+
+            document.write("Dollar coins: " + dollar);
+            document.write("<br>Half dollar coins: " + half_dollar);
+            document.write("<br>Quarter coins: " + quarter);
+            document.write("<br>Dime coins: " + dime);
+            document.write("<br>Nickel coins: " + nickel);
+            document.write("<br>Penny coins: " + penny);
+            
+            alert("The total value is: " + total);
+
+            document.write("<br><br>Total: " + total);
+
+        </script>        
+    </body>
+</html>
