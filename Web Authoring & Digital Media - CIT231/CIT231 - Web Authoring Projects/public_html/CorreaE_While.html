@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>its in the loop</title>
+        <style>
+            body {
+                background-color: brown;
+                color:white;
+                font-size:24px;
+            }
+        </style>
+
+        <script>
+            function whileLoop() {
+                var ans = 'y';
+                while (ans == 'y') {
+                    var wordEntered = prompt("What is the word you want to change to upper case?", "apple");
+                    document.write("The new word in upper case is: " + wordEntered.toUpperCase() + "<br>");
+                    ans = prompt("Using the While loop, do you want to try again?", "y");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h4>This loop is a while loop and only execute while a condition exists</h4>
+        <script>
+            whileLoop();
+        </script>
+    </body>
+</html>

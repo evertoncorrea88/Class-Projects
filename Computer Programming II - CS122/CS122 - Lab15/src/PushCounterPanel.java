@@ -38,21 +38,21 @@ public class PushCounterPanel extends JPanel {
         joeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                joeCount++;                
+                joeCount++;
                 joeLabel.setText("Votes: " + joeCount);
             }
         });
 
-        joeCount = 0;        
+        joeCount = 0;
         joeLabel = new JLabel("Votes: " + joeCount);
 
         add(joeButton);
         add(joeLabel);
 
         setPreferredSize(new Dimension(300, 80));
-        setBackground(Color.cyan);
+        setBackground(Color.cyan);            
     }
-
+    
     //*****************************************************************
     //  Represents a listener for button push (action) events.
     //*****************************************************************

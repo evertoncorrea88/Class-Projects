@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Temperature Converter</title>
+        <style>
+            body {
+                background-color: #888888;
+                font-size: 24px;
+                color: white;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            table, th, td {
+                border: 2px solid white;
+            }
+            .blue {
+                color: blue;
+            }
+            .green {
+                color: greenyellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Temperature Converter</h2>
+        
+        <script>
+            var min, max;
+
+            min = parseInt(prompt("Enter the min temperature:", "0"));
+
+            max = parseInt(prompt("Enter the max temperature:", "35"));
+            
+            generate_table(min, max);
+
+            function generate_table(begin, end) {
+
+                var table = document.createElement('table');
+
+                var tr = document.createElement('tr');
+
+                var th1 = document.createElement('th');
+                var th2 = document.createElement('th');
+
+                var text1 = document.createTextNode('Celsius');
+                var text2 = document.createTextNode('Fahrenheit');
+
+                th1.appendChild(text1);
+                th2.appendChild(text2);
+                tr.appendChild(th1);
+                tr.appendChild(th2);
+
+                table.appendChild(tr);
+                
+                while (begin <= end) {
+                    tr = document.createElement('tr');
+
+                    var td1 = document.createElement('td');
+                    var td2 = document.createElement('td');       
+                    
+                    var fahrenheit = celsius_to_fahrenheit(begin);
+
+                    text1 = document.createTextNode(begin);
+                    text2 = document.createTextNode(fahrenheit);    
+                    
+                    td1.setAttribute('class', 'blue');
+                    td2.setAttribute('class', 'green');
+                        
+                    td1.appendChild(text1);
+                    td2.appendChild(text2);
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+
+                    table.appendChild(tr);
+                    begin++;
+                }
+                document.body.appendChild(table);
+            }
+
+            function celsius_to_fahrenheit(celsius) {
+                var fahrenheit;
+                fahrenheit = (celsius * 9) / 5 + 32;
+                return fahrenheit;
+            }
+
+        </script>             
+    </body>
+</html>

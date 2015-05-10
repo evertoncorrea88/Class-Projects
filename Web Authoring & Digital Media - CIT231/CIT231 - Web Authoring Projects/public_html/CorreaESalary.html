@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bonus Calculator</title>
+
+        <script type="text/javascript">
+            function validate()
+            {
+                if (isNaN(salary.value)) {
+                    alert("You should enter a number.");
+                } else {
+                    calculate(salary.value);
+                }
+            }
+            function calculate(sal) {
+//              up to 30k - 5% bonus
+                if (sal >= 0 && sal <= 30000) {
+                    bonus.value = (sal * 5) / 100;
+                }
+//              30001- 50k - 4.5% bonus
+                else if (sal >= 30001 && sal <= 50000) {
+                    bonus.value = (sal * 4.5) / 100;
+                }
+//              50001 - 75k - 4% bonus                
+                else if (sal >= 50001 && sal <= 75000) {
+                    bonus.value = (sal * 4) / 100;
+                }
+//              75001 - 100k - 3% bonus
+                else if (sal >= 75001 && sal <= 100000) {
+                    bonus.value = (sal * 3) / 100;
+                }
+//              100001 - 150k - 2% bonus
+                else if (sal >= 100001 && sal <= 150000) {
+                    bonus.value = (sal * 2) / 100;
+                }
+//              150k+ bonus is given in stock shares
+                else if (sal >= 150001) {
+                    bonus.value = "You earn shares of stock for your salary";
+                }
+//              Make sure the value is valid, otherwise a message should say, "Not a valid amount"
+                else {
+                    alert("Not a valid amount.");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Bonus Calculator</h2>
+
+        <label for="salary">Salary: </label>
+        <input type="text" name="salary" id="salary" size="20"><br>
+
+        <label for="bonus">Bonus: </label>
+        <input type="text" name="bonus" id="bonus" size="20" readonly><br>        
+
+        <input type="button" value="Calculate" onclick="validate()">
+    </body>
+</html>

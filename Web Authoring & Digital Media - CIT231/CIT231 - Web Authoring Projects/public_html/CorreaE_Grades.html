@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Grades</title>
+        <style>
+            body {
+                font-size: 25px;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            table, th, td {
+                border: 2px solid black;
+                text-align: center;
+            }
+            img{
+                width: 50px;
+                height: 50px;
+            }
+        </style>
+        <script>
+            function calcGrades() {
+                var numGrades = parseInt(prompt("How many grades will be entered?"));
+
+                var actGrades = [];
+                var avgGrades = 0;
+                var letter;
+                var img;
+                var src;
+                var color;
+
+                for (i = 0; i < numGrades; i++) {
+                    actGrades[i] = parseInt(prompt("Enter your grade:"));
+                    avgGrades += actGrades[i];
+                }
+                avgGrades /= numGrades;
+
+                if (avgGrades <= 100 && avgGrades >= 90) {
+                    letter = 'A';
+                    src = 'http://afv.com/wp-content/uploads/2014/12/Sunglass-emoji.png';
+                    color = 'blue';
+                } else if (avgGrades < 90 && avgGrades >= 80) {
+                    letter = 'B';
+                    src = 'http://www.breakingthroughwithyou.co.uk/wp-content/uploads/2014/09/Positive.jpg';
+                    color = 'green';
+                } else if (avgGrades < 80 && avgGrades >= 70) {
+                    letter = 'C';
+                    src = 'http://www.thedatereport.com/dating/wp-content/uploads/2013/08/face.jpg';
+                    color = 'gold';
+                } else if (avgGrades < 70 && avgGrades >= 60) {
+                    letter = 'D';
+                    src = 'http://www.livryan.com/wp-content/uploads/2015/04/crying-emoji.png';
+                    color = 'peru';
+                } else if (avgGrades < 60 && avgGrades >= 0) {
+                    letter = 'F';
+                    src = 'http://www.kansascity.com/living/liv-columns-blogs/jenee-osterheldt/n5aprs/picture669451/ALTERNATES/FREE_960/Emoji%20Crying.jpg';
+                    color = 'red';
+                } else {
+                    alert('The values entered are not valid. Your grades should be from 0 to 100.');
+                    return;
+                }
+
+                generate_table(actGrades);
+
+                document.write('<br>Number of grades entered: <b>' + numGrades + '</b>');
+
+                document.write('<br>Your average grade score is: <b>' + avgGrades + '</b>');
+
+                document.write('<br>Your letter grade score is: <b>' + letter + '  </b>');
+
+                document.body.style.background = color;
+
+                img = document.createElement("img");
+                img.src = src;
+                document.body.appendChild(img);
+            }
+
+            function generate_table(grades) {
+                var table = document.createElement('table');
+
+                var tr = document.createElement('tr');
+                var th1 = document.createElement('th');
+                var text1 = document.createTextNode('Grades');
+
+                th1.appendChild(text1);
+                tr.appendChild(th1);
+                table.appendChild(tr);
+
+                for (i = 0; i < grades.length; i++) {
+                    tr = document.createElement('tr');
+                    var td1 = document.createElement('td');
+                    text1 = document.createTextNode(grades[i]);
+
+                    td1.appendChild(text1);
+                    tr.appendChild(td1);
+                    table.appendChild(tr);
+                }
+                document.body.appendChild(table);
+            }
+        </script>
+
+    </head>
+    <body>
+        <h2>Grades Calculator</h2>
+        <script>
+            calcGrades();
+        </script>
+    </body>
+</html>
