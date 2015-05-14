@@ -1,0 +1,10 @@
+Don Quixote	Miguel de Cervantes	Spanish
+A Tale Of Two Cities	Charles Dickens	English
+The Lord of the Rings	J. R. R. Tolkien	English
+Le Petit Prince	Antoine de Saint-Exupéry	French
+Harry Potter and the Philosopher's Stone	J. K. Rowling	English
+And Then There Were None	Agatha Christie	English
+Dream of the Red Chamber	Cao Xueqin	Chinese
+The Hobbit	J. R. R. Tolkien	English
+She: A History of Adventure	H. Rider Haggard	English
+The Lion, the Witch and the Wardrobe	C. S. Lewis	English
